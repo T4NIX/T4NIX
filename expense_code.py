@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-# Paste your Pushbullet Access Token here (KEEP PRIVATE)
+# Your Pushbullet Access Token (keep private!)
 PUSHBULLET_TOKEN = "o.mSwwdTaGJVL07XCqY3cxUEeDgSBTf6xx"
 
 def send_push_notification(title, body, token):
@@ -94,3 +94,10 @@ if budget > 0:
 
         st.markdown("---")
         st.success("💰 TIP: Try to save at least 10% of your monthly budget!")
+
+        # Send tip as push notification as well
+        send_push_notification(
+            "💰 Budget Saving Tip",
+            "Try to save at least 10% of your monthly budget!",
+            PUSHBULLET_TOKEN
+        )
