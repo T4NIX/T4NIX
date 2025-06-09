@@ -1,3 +1,7 @@
+import streamlit as st
+
+st.set_page_config(page_title="Monthly Expense Tracker", page_icon="📊")
+st.title("📊 Monthly Expense Tracker")
 # Show Summary button (FIXED version)
 if st.button("Show Summary"):
     if budget > 0:
